@@ -42,9 +42,16 @@ public class HelloWorld {
         // System.out.println(max);
         // System.out.println(min);
 
-        String first = "first";
-        String last = "last";
-        System.out.printf("%s %s", first, last);
+        // String first = "first";
+        // String last = "last";
+        // System.out.printf("%s %s", first, last);
+
+        // String first = "first";
+        // String state = "texas";
+        // int age = 1;
+        // System.out.printf("%s is from %s and is %d years old", first, state, age);
+
+
 
     }
 }
