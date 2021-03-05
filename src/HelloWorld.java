@@ -1,6 +1,8 @@
-public class HelloWorld {
-    public static void main(String[] args) {
+import java.util.Scanner;
 
+public class HelloWorld {
+
+    public static void main(String[] args) {
         // System.out.print("Hello, ");
         // System.out.println("World!");
 
@@ -51,7 +53,31 @@ public class HelloWorld {
         // int age = 1;
         // System.out.printf("%s is from %s and is %d years old", first, state, age);
 
-
-
+        System.out.println("Enter 3 names:");
+        printNames();
     }
+
+    public static void printNames(String name) {
+        System.out.printf("One: %s \n", name);
+    }
+
+    public static void printNames(String name, String name2) {
+        System.out.printf("Two: %s and %s \n", name, name2);
+    }
+
+    public static void printNames(String name, String name2, String name3) {
+        System.out.printf("Three: %s, %s, and %s \n", name, name2, name3);
+    }
+
+    public static void printNames() {
+        Scanner sc = new Scanner(System.in);
+
+        String name = sc.nextLine();
+        String name2 = sc.nextLine();
+        String name3 = sc.nextLine();
+        printNames(name);
+        printNames(name, name2);
+        printNames(name, name2, name3);
+    }
+
 }
