@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class MethodsExercises {
     public static void main(String[] args) {
 
-
 //        add();
 //        subtract();
 //        multiply();
@@ -12,7 +11,7 @@ public class MethodsExercises {
 //        divide();
 //        mod(3, 2);
 //        getInteger(1, 10);
-//        getFactorial();
+        getFactorial();
 
     }
 
@@ -84,17 +83,28 @@ public class MethodsExercises {
             System.out.println("Number is: " + userInput);
             return userInput;
         } else {
-            System.out.println("Number out of range \n");
+            System.out.print("Number out of range \n");
             return getInteger(1, 10);
         }
     }
 
-//    public static int getFactorial() {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Enter a number between 1 and 10:");
-//        int userInput = sc.nextInt();
+    public static void getFactorial() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number between 1 and 10: ");
+        int userNum = sc.nextInt();
+
+        if (userNum >= 1 && userNum <= 10) {
+            System.out.println("in range");
+        } else {
+            System.out.println("out of range");
+        }
+        System.out.println("done");
+    }
+
+//    public static int rollDice() {
 //
 //    }
+
 
 
 }
