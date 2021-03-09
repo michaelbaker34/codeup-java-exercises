@@ -28,7 +28,6 @@ public class HighLow {
                 playGame(scanner, randomNum);
             }
         }
-
     }
 
     public static String checkGuess(int guess, int targetNum) {
