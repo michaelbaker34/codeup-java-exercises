@@ -8,6 +8,7 @@ public class HighLow {
     public static void initializeGame() {
         Scanner scanner = new Scanner(System.in);
         int randomNum = (int)(Math.random() * 100) + 1;
+
         System.out.print("Guess number between 1 and 100: ");
         playGame(scanner, randomNum);
     }
