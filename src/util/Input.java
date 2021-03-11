@@ -7,18 +7,15 @@ public class Input {
     private static Scanner scanner = new Scanner(System.in);
 
     public static String getString() {
-        System.out.print("Enter a string: ");
         return scanner.nextLine();
     }
 
     public static boolean yesNo() {
-        System.out.print("Enter yes or no: ");
         String userInput = scanner.next();
-        return userInput.contains("y");
+        return (userInput.equalsIgnoreCase("y") || (userInput.equalsIgnoreCase("yes")));
     }
 
     public static int getInt(int min, int max, int userInt) {
-
         if (userInt < min || userInt > max) {
             System.out.println("Number out of range.");
             userInt = getInt(min, max, userInt);
@@ -28,7 +25,6 @@ public class Input {
     }
 
     public static int getInt() {
-        System.out.print("Enter a number: ");
         return scanner.nextInt();
     }
 
@@ -41,7 +37,7 @@ public class Input {
     }
 
     public static double getDouble() {
-        System.out.println("Enter a decimal: ");
+//        System.out.println("Enter a decimal: ");
         return scanner.nextDouble();
     }
 
