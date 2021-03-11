@@ -32,17 +32,16 @@ public class Input {
         return scanner.nextInt();
     }
 
-    public static double getDouble(double min, double max, Scanner scanner) {
-        double userDouble =  scanner.nextDouble();
-        System.out.printf("Enter decimal between %f and %f: ", min, max);
+    public static double getDouble(double min, double max, Double userDouble) {
         if (userDouble < min || userDouble > max) {
             System.out.println("Decimal not in range.");
-            userDouble = getDouble(min, max, scanner);
+            userDouble = getDouble(min, max, userDouble);
         }
         return userDouble;
     }
 
     public static double getDouble() {
+        System.out.println("Enter a decimal: ");
         return scanner.nextDouble();
     }
 
