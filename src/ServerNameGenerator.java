@@ -13,6 +13,7 @@ public class ServerNameGenerator {
 
     public static void main(String[] args) {
 
+        System.out.print("Server Name: ");
         System.out.println(getWord(adjectives) + "-" + getWord(nouns));
 
     }
