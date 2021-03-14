@@ -6,21 +6,22 @@ public class Movie {
 
 // set movie constructor
     public Movie(String name, String category) {
-
+        this.name = name;
+        this.category = category;
     }
 
 
-// movie setter
-    public String setMovie(String title) {
-        return String.format("Title: %s%n", title);
+// movie name setter
+    public String setMovie(String name) {
+        return this.name = name;
     }
 
-// movie getter
+// movie name getter
 
 
 // category setter
     public String setCategory(String category) {
-        return String.format("Category: %s%n", category);
+        return this.category = category;
     }
 
 // category getter
