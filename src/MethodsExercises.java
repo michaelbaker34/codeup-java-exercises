@@ -3,8 +3,6 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
-    private static Input input = new Input();
-
     public static void main(String[] args) {
 
 //        add();
@@ -15,7 +13,7 @@ public class MethodsExercises {
 //        divide();
 //        mod(3, 2);
 //        getInteger(1, 10);
-//        getFactorial();
+        getFactorial();
 
     }
 
@@ -92,8 +90,19 @@ public class MethodsExercises {
         }
     }
 
-//    public static int getFactorial() {
-//
-//    }
+    public static void getFactorial() {
+        System.out.print("Enter number: ");
+        Scanner sc = new Scanner(System.in);
+        int userInput = sc.nextInt();
+        int factorial = 1;
+        if (userInput >= 1 && userInput <= 20) {
+            for (int i = 1; i <= userInput; i += 1) {
+                factorial = factorial * i;
+                System.out.printf("%d! = %d = %d%n", i, i, factorial);
+            }
+        } else {
+            System.out.println("number out of range");
+        }
+    }
 
 }
