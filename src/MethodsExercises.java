@@ -1,6 +1,10 @@
+import util.Input;
 import java.util.Scanner;
 
 public class MethodsExercises {
+
+    private static Input input = new Input();
+
     public static void main(String[] args) {
 
 //        add();
@@ -88,23 +92,9 @@ public class MethodsExercises {
         }
     }
 
-    public static void getFactorial() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 10: ");
-        int userNum = sc.nextInt();
-
-        if (userNum >= 1 && userNum <= 10) {
-            System.out.println("in range");
-        } else {
-            System.out.println("out of range");
-        }
-        System.out.println("done");
-    }
-
-//    public static int rollDice() {
+//    public static int getFactorial() {
 //
 //    }
-
-
+    xw
 
 }
