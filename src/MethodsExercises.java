@@ -15,7 +15,7 @@ public class MethodsExercises {
 //        divide();
 //        mod(3, 2);
 //        getInteger(1, 10);
-        getFactorial();
+//        getFactorial();
 
     }
 
