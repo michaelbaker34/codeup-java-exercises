@@ -13,7 +13,8 @@ public class MethodsExercises {
 //        divide();
 //        mod(3, 2);
 //        getInteger(1, 10);
-        getFactorial();
+//        getFactorial();
+//        System.out.println(getFactorialRecursion(3));
 
     }
 
@@ -104,5 +105,16 @@ public class MethodsExercises {
             System.out.println("number out of range");
         }
     }
+
+    public static int getFactorialRecursion(int numInput) {
+        if (numInput > 0 && numInput < 10) {
+            return numInput * getFactorialRecursion(numInput - 1);
+        } else {
+            return 1;
+        }
+    }
+
+
+
 
 }
