@@ -95,6 +95,5 @@ public class MethodsExercises {
 //    public static int getFactorial() {
 //
 //    }
-    xw
 
 }
