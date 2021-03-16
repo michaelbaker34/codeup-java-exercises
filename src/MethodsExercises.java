@@ -1,7 +1,9 @@
-import util.Input;
 import java.util.Scanner;
 
 public class MethodsExercises {
+
+    private static final Scanner sc = new Scanner(System.in);
+    public static int userInt = sc.nextInt();
 
     public static void main(String[] args) {
 
@@ -14,12 +16,11 @@ public class MethodsExercises {
 //        mod(3, 2);
 //        getInteger(1, 10);
 //        getFactorial();
-//        System.out.println(getFactorialRecursion(3));
+//        System.out.println(getFactorialRecursion(4));
 
     }
 
     public static void add() {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter two numbers to add:");
         int input1 = sc.nextInt();
         int input2 = sc.nextInt();
@@ -28,7 +29,6 @@ public class MethodsExercises {
     }
 
     public static void subtract() {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter two numbers to subtract:");
         int input1 = sc.nextInt();
         int input2 = sc.nextInt();
@@ -37,7 +37,6 @@ public class MethodsExercises {
     }
 
     public static void multiply() {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter two numbers to multiply:");
         int input1 = sc.nextInt();
         int input2 = sc.nextInt();
@@ -45,11 +44,11 @@ public class MethodsExercises {
         System.out.printf("%d * %d = " + product + "\n", input1, input2);
     }
 
-    public static int multiplyLoop(int x, int y) {
+    public static int multiplyLoop(int num1, int num2) {
         int result = 0;
-        while (x > 0) {
-            result += y;
-            x--;
+        while (num1 > 0) {
+            result += num2;
+            num1--;
         }
         System.out.println("3 * 5 = " + result);
         return (result);
@@ -64,7 +63,6 @@ public class MethodsExercises {
     }
 
     public static void divide() {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter two numbers to divide:");
         int input1 = sc.nextInt();
         int input2 = sc.nextInt();
@@ -79,7 +77,6 @@ public class MethodsExercises {
     }
 
     public static int getInteger(int min, int max) {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number between 1 and 10:");
         int userInput = sc.nextInt();
         if (userInput >= min && userInput <= max) {
@@ -92,8 +89,6 @@ public class MethodsExercises {
     }
 
     public static void getFactorial() {
-        System.out.print("Enter number: ");
-        Scanner sc = new Scanner(System.in);
         int userInput = sc.nextInt();
         int factorial = 1;
         if (userInput >= 1 && userInput <= 20) {
@@ -106,15 +101,22 @@ public class MethodsExercises {
         }
     }
 
-    public static int getFactorialRecursion(int numInput) {
-        if (numInput > 0 && numInput < 10) {
-            return numInput * getFactorialRecursion(numInput - 1);
+    public static int getFactorialRecursion(int userInt) {
+        if (userInt > 0 && userInt < 10) {
+            return userInt * getFactorialRecursion(userInt - 1);
         } else {
             return 1;
         }
     }
 
+    public void setDiceSides() {
+        System.out.println("Enter number of sides: ");
+        int diceSides = userInt;
+    }
 
+//    public static int getDiceSides() {
+//        return diceSides;
+//    }
 
 
 }
