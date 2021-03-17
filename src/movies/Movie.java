@@ -10,14 +10,16 @@ public class Movie {
         this.category = category;
     }
 
-
 // movie name setter
-    public String setMovie(String name) {
+    public String setName(String name) {
         return this.name = name;
     }
 
 // movie name getter
 
+    public String getName() {
+        return name;
+    }
 
 // category setter
     public String setCategory(String category) {
@@ -26,5 +28,8 @@ public class Movie {
 
 // category getter
 
+    public String getCategory() {
+        return category;
+    }
 
 }

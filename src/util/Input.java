@@ -23,7 +23,7 @@ public class Input {
 
 //    validate int
     public int getInt(int min, int max) {
-        System.out.printf("Enter a number between %d and %d: ", min, max);
+//        System.out.printf("Enter a number between %d and %d: %n", min, max);
         int userInt = getInt();
         if (userInt < min || userInt > max) {
             System.out.println("Number out of range");
