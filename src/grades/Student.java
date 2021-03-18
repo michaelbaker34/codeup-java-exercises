@@ -1,7 +1,6 @@
 package grades;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Student {
@@ -21,19 +20,24 @@ public class Student {
         grades.add(grade);
     }
 
+//    public double getGradeAverage() {
+//        double sum = 0;
+//        for (int grade : grades) {
+//            sum += grade;
+//        }
+//        return sum / grades.size();
+//    }
+
     public double getGradeAverage() {
-        double sum = 0;
-        for (int grade : grades) {
-            sum += grade;
-        }
-        return sum / grades.size();
+        return (double) grades.stream().reduce(Integer::sum).get() / grades.size();
     }
 
     public static void main(String[] args) {
 
         Student student1 = new Student("bob");
         student1.addGrade(90);
-        student1.addGrade(90);
+        student1.addGrade(80);
+        student1.addGrade(70);
         System.out.println(student1.getGradeAverage());
 
     }
