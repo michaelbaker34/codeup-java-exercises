@@ -41,11 +41,11 @@ public class GradesApplication {
 
     // Returns a message containing a list of students
     private String getStudentsList() {
-        String output = "Here are the user names of our students:\n\n";
+        StringBuilder output = new StringBuilder("Here are the user names of our students:\n\n");
         for (Map.Entry<String, Student> entry : students.entrySet()) {
-            output += "|" + entry.getKey() + "| ";
+            output.append("|").append(entry.getKey()).append("| ");
         }
-        return "\n" + output.trim();
+        return "\n" + output.toString().trim();
     }
 
     // Returns a formatted message containing student information

@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Student {
 
-    private String name;
-    private List<Integer> grades;
+    private final String name;
+    private final List<Integer> grades;
 
     public Student(String name) {
         this.name = name;
