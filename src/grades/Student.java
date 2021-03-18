@@ -8,9 +8,9 @@ public class Student {
     private String name;
     private List<Integer> grades;
 
-    public Student(String name, List<Integer> grades) {
+    public Student(String name) {
         this.name = name;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
     }
 
     public String getName() {
@@ -31,10 +31,9 @@ public class Student {
 
     public static void main(String[] args) {
 
-        List<Integer> grades = Arrays.asList();
-        Student student1 = new Student("bob", grades);
-//        student1.addGrade(90);
-//        student1.addGrade(90);
+        Student student1 = new Student("bob");
+        student1.addGrade(90);
+        student1.addGrade(90);
         System.out.println(student1.getGradeAverage());
 
     }
