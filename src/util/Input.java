@@ -19,14 +19,22 @@ public class Input {
         return (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
     }
 
-    public int getInt() {
-        if (scanner.hasNextInt()) {
-            return scanner.nextInt();
-        } else {
-            System.out.println("Invalid input; please enter an integer!");
-            scanner.nextLine();
+// get int
+    public int getInt() throws IllegalArgumentException {
+        try {
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException e) {
+            System.out.printf("Input not parsed to int. %s", e.getMessage());
+            System.out.print("Try again: ");
             return getInt();
         }
+//        if (scanner.hasNextInt()) {
+//            return scanner.nextInt();
+//        } else {
+//            System.out.println("Invalid input; please enter an integer!");
+//            scanner.nextLine();
+//            return getInt();
+//        }
     }
 
     public int getInt(int min, int max) {
@@ -34,12 +42,14 @@ public class Input {
         if (userInt >= min && userInt <= max) {
             return userInt;
         } else {
-            System.out.println("Out of range. Please enter a number between " + min + " and " + max + ".");
+            System.out.printf("Out of range. Please enter a number between %d and %d.", min, max);
             return getInt(min, max);
         }
     }
 
-    public double getDouble() {
+// get double
+    public double getDouble() throws IllegalArgumentException {
+        double myDouble = Double.parseDouble(getString());
         if (scanner.hasNextDouble()) {
             return scanner.nextDouble();
         } else {
@@ -61,10 +71,7 @@ public class Input {
 
 
     public static void main(String[] args) {
-        Input input = new Input();
-        System.out.println("Please enter a number between 1.5 and 3.5");
-        double userInt = input.getDouble(1.5, 3.5);
-        System.out.println("You entered: " + userInt);
+
     }
 
 
