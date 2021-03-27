@@ -20,12 +20,12 @@ public class ShapesTest {
         Quadrilateral quad2;
         quad2 = new Square(5);
 
-        System.out.println("Rectangle");
-        System.out.printf("Area: %.2f%n", quad1.getArea());
-        System.out.printf("Perimeter: %.2f%n", quad1.getPerimeter());
-        System.out.println("Square");
-        System.out.printf("Area: %.2f%n", quad2.getArea());
-        System.out.printf("Perimeter: %.2f%n", quad2.getPerimeter());
+//        System.out.println("Rectangle");
+//        System.out.printf("Area: %.2f%n", quad1.getArea());
+//        System.out.printf("Perimeter: %.2f%n", quad1.getPerimeter());
+//        System.out.println("Square");
+//        System.out.printf("Area: %.2f%n", quad2.getArea());
+//        System.out.printf("Perimeter: %.2f%n", quad2.getPerimeter());
 
     }
 
