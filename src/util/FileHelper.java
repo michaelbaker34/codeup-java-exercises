@@ -44,8 +44,7 @@ public class FileHelper {
                 }
             } else {
                 try {
-                    Writer fileWrite = new FileWriter(testPathString);
-                    fileWrite.write(contents.toString());
+                    Files.write(testPath, contents);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -56,7 +55,7 @@ public class FileHelper {
     public static void main(String[] args) {
         List<String> testContents = new ArrayList<>();
         testContents.add("test contents and more test contents");
-        spit("testFile", testContents, false);
+        spit("testFile.txt", testContents, false);
     }
 
 }
