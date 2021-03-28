@@ -54,7 +54,9 @@ public class FileHelper {
     }
 
     public static void main(String[] args) {
-
+        List<String> testContents = new ArrayList<>();
+        testContents.add("test contents and more test contents");
+        spit("testFile", testContents, false);
     }
 
 }

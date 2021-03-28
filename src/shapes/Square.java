@@ -1,6 +1,8 @@
 package shapes;
 
-public class Square extends Quadrilateral implements Shape {
+import java.awt.*;
+
+public class Square extends Quadrilateral {
 
     public Square (double side) {
         super (side, side);
