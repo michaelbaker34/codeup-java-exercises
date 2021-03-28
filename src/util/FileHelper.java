@@ -1,7 +1,6 @@
 package util;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.*;
 import java.util.*;
 
@@ -19,19 +18,37 @@ public class FileHelper {
         return lines;
     }
 
-    void spit (String filename, List<String> contents, boolean append) {
-//        File file = new File(filename);
-        Path path = Paths.get(filename);
-        String pathString = path.toString();
+    static void spit (String filename, List<String> contents, boolean append) {
+//        Path path = Paths.get(filename);
+//        String pathString = path.toString();
 
-        if (Files.exists(path)) {
-            slurp(pathString);
-        } else {
+        Path testPath = Paths.get("src", "util", filename);
+        String testPathString = testPath.toString();
+
+
+        if (!Files.exists(testPath)) {
             try {
-                Files.createFile(path);
+                Files.createFile(testPath);
+                spit(filename, contents, append);
             } catch (IOException e) {
                 e.printStackTrace();
                 System.exit(1);
+            }
+        } else {
+            if (append) {
+                try {
+                    Files.write(testPath, contents, StandardOpenOption.APPEND);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    System.exit(1);
+                }
+            } else {
+                try {
+                    Writer fileWrite = new FileWriter(testPathString);
+                    fileWrite.write(contents.toString());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
