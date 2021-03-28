@@ -21,10 +21,7 @@ public class FileHelper {
     static void spit (String filename, List<String> contents, boolean append) {
 //        Path path = Paths.get(filename);
 //        String pathString = path.toString();
-
         Path testPath = Paths.get("src", "util", filename);
-        String testPathString = testPath.toString();
-
 
         if (!Files.exists(testPath)) {
             try {
@@ -47,15 +44,27 @@ public class FileHelper {
                     Files.write(testPath, contents);
                 } catch (IOException e) {
                     e.printStackTrace();
+                    System.exit(1);
                 }
             }
         }
     }
 
     public static void main(String[] args) {
+// append test
         List<String> testContents = new ArrayList<>();
         testContents.add("test contents and more test contents");
-        spit("testFile.txt", testContents, false);
+//        spit("testFile.txt", testContents, true);
+
+// override test
+        List<String> overrideTest = new ArrayList<>();
+        overrideTest.add("test contents overridden");
+//        spit("testFile.txt", overrideTest, false);
+
+// read file test
+        Path testPath = Paths.get("src", "util", "testFile.txt");
+        String testPathString = testPath.toString();
+//        System.out.println(slurp(testPathString));
     }
 
 }
